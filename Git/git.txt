@@ -1,0 +1,60 @@
+Create new user 
+git config --global user.name "kotchamon"
+git config --global user.email "kotchamon.jk@gmail.com"
+git config --global --list
+
+------------------------------------------
+
+git init (create Git repository)
+git status (verify working directory & staging area)
+git add (add file working directory to staging area)
+git diff (show diff working directory vs staging area)
+git commit (keep file staging area to repository)
+git log (show log)
+git log --oneline --graph --decorate --all
+
+-------------------------------------------
+recover file
+
+git show head
+git checkout HEAD greeting.txt
+echo "git: Hey Good to see you." >> greeting.txt
+
+--------------------------------------------
+branching & Merging
+git branch                     --> show all branch
+git branch <branch_name>       --> create new branch
+git checkout <branch_name>     --> switch branch 
+git merge <branch_name>        --> merge branch 
+git branch -d <branch_name>    --> delete branch
+
+----------------------------
+git remote
+ 
+git clone https://github.com/JKotchamon/git-demo.git\
+git remote -v
+git fetch                -->(check) pull all data from remote to local
+git merge  origin/master --> merge origin/master to local branch
+git pull                 --> merge file remote to local(git fetch + git merge)
+git push origin <branch_name> -- > sent local branch to originremote
+(git push -u origin main)
+
+
+----------
+modify (add)
+
+-git clone https://github.com/JKotchamon/git-demo.git\
+-git remote -v
+-git status
+-git add .
+-git commit -m "update"
+-git push -u origin master
+
+modify (delete)
+-git status
+-git add index.html
+-git commit -m "update"
+-git push -u origin master
+
+
+
